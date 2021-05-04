@@ -9,7 +9,7 @@ graph = {
     'F' : []
 }
 
-visited = ()
+visited = set()
 
 def BFS(startingNode):
     
@@ -28,14 +28,16 @@ def BFS(startingNode):
                 queue.append(n)
                 n.visisted = True
 
-def DFS(n:Node, graph, visited:set):
-    visited.add(n)
-    
+def DFS(n, graph, visited:set):
     if (n not in visited):
-        DFS(n.firstUnvisitedNode, visistedArr)
-        print(n)
+        print (n)
+        visited.add(n)
+        # Iterate the adjacency list and call DFS
+        for neighborNode in graph[n]:
+            DFS(neighborNode, graph, visited)
 
-DFS(n,graph,visited)
+# Call the function with a starting node
+DFS("A",graph,visited)
 
 
 
