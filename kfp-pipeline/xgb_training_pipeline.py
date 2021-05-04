@@ -290,7 +290,7 @@ def xgb_train_pipeline(
             cluster_name=cluster_name,
             data=transform_output_eval,
             model=train_output,
-            target=target,
+            target=target,``
             analysis=analyze_output,
             output=predict_output
         ).after(_train_op).set_display_name('Predictor')
