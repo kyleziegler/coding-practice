@@ -2,8 +2,6 @@
 # Read last n lines of a file
 # Python 3.9
 
-# I used a mem
-
 import os
 import argparse
 import sys
@@ -15,6 +13,9 @@ parser.add_argument("-f", "--file-name", help="File name", type=str, required=Tr
 
 args = parser.parse_args()
 
+# I used a memory profiler from: https://pypi.org/project/memory-profiler/ 
+# pip install -U memory_profiler
+# python setup.py install
 @profile
 def read_n_lines(num_lines:int, f_name:str):
     try:
