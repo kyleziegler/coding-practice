@@ -7,13 +7,14 @@ def main(s:str, index:int) -> list:
         # End case
         print ("".join(s))
 
+    copy = list(s)
     for i in range(index, len(s)):
-        print(i,index)
-        copy = list(s)
+        print("Loop index",i,"function index",index)
+        
 
         # Swap characters, and increase the index
         copy[index], copy[i] = copy[i], copy[index]
-        print("main(",copy,index+1,")")
+        # print("main(",copy,index+1,")")
         main(copy,index+1)
 
-main("COOL",0)
+main("abc",0)
