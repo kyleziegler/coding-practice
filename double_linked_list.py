@@ -21,5 +21,3 @@ def delete_node_with_key(keyName:str, linked_list_head:Node):
         working_node = linked_list_head.next
         if (working_node == None):
             return "Could not find the value"
-
-
